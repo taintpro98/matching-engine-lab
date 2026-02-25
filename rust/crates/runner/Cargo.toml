@@ -1,0 +1,14 @@
+[package]
+name = "runner"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "runner"
+path = "src/main.rs"
+
+[dependencies]
+engine_core = { path = "../engine_core" }
+engine_v1_btreemap = { path = "../engine_v1_btreemap" }
+engine_v2_skiplist = { path = "../engine_v2_skiplist" }
+engine_v3_arena = { path = "../engine_v3_arena" }

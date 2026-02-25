@@ -1,0 +1,9 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/engine_core",
+    "crates/engine_v1_btreemap",
+    "crates/engine_v2_skiplist",
+    "crates/engine_v3_arena",
+    "crates/runner",
+]

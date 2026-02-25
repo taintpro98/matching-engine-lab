@@ -1,0 +1,8 @@
+{"PlaceSell":{"id":1,"price":100,"qty":100,"timestamp":1000}}
+{"PlaceSell":{"id":2,"price":99,"qty":50,"timestamp":1001}}
+{"PlaceSell":{"id":3,"price":101,"qty":200,"timestamp":1002}}
+{"PlaceSell":{"id":4,"price":99,"qty":25,"timestamp":1003}}
+{"BuyByQty":{"id":5,"qty":75,"timestamp":1004}}
+{"BuyByBudget":{"id":6,"budget":5000,"timestamp":1005}}
+{"CancelSell":{"id":3}}
+{"BuyByQty":{"id":7,"qty":50,"timestamp":1006}}

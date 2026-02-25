@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Command",
+  "description": "Matching engine command",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": ["PlaceSell"],
+      "properties": {
+        "PlaceSell": {
+          "type": "object",
+          "required": ["id", "price", "qty", "timestamp"],
+          "properties": {
+            "id": { "type": "integer", "minimum": 0 },
+            "price": { "type": "integer", "minimum": 0 },
+            "qty": { "type": "integer", "minimum": 0 },
+            "timestamp": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": ["CancelSell"],
+      "properties": {
+        "CancelSell": {
+          "type": "object",
+          "required": ["id"],
+          "properties": {
+            "id": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": ["BuyByQty"],
+      "properties": {
+        "BuyByQty": {
+          "type": "object",
+          "required": ["id", "qty", "timestamp"],
+          "properties": {
+            "id": { "type": "integer", "minimum": 0 },
+            "qty": { "type": "integer", "minimum": 0 },
+            "timestamp": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": ["BuyByBudget"],
+      "properties": {
+        "BuyByBudget": {
+          "type": "object",
+          "required": ["id", "budget", "timestamp"],
+          "properties": {
+            "id": { "type": "integer", "minimum": 0 },
+            "budget": { "type": "integer", "minimum": 0 },
+            "timestamp": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    }
+  ]
+}

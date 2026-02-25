@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Event",
+  "description": "Matching engine event",
+  "oneOf": [
+    { "type": "object", "required": ["Accepted"], "properties": { "Accepted": {} } },
+    { "type": "object", "required": ["Rejected"], "properties": { "Rejected": { "type": "object", "properties": { "reason": { "type": "string" } } } },
+    {
+      "type": "object",
+      "required": ["Trade"],
+      "properties": {
+        "Trade": {
+          "type": "object",
+          "properties": {
+            "buyer_id": { "type": "integer" },
+            "seller_id": { "type": "integer" },
+            "qty": { "type": "integer" },
+            "price": { "type": "integer" }
+          }
+        }
+      }
+    },
+    { "type": "object", "required": ["SellUpdated"], "properties": { "SellUpdated": { "type": "object" } } },
+    { "type": "object", "required": ["SellClosed"], "properties": { "SellClosed": { "type": "object" } } },
+    { "type": "object", "required": ["BuyResultQty"], "properties": { "BuyResultQty": { "type": "object", "properties": { "filled": { "type": "integer" } } } },
+    { "type": "object", "required": ["BuyResultBudget"], "properties": { "BuyResultBudget": { "type": "object", "properties": { "spent": { "type": "integer" }, "filled": { "type": "integer" } } } }
+  ]
+}

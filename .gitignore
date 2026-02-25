@@ -1,0 +1,41 @@
+# Rust
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+*.egg-info/
+.eggs/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Outputs
+outputs/rust/*.ndjson
+outputs/go/*.ndjson
+datasets/generated/*.ndjson
