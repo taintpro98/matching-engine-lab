@@ -11,11 +11,10 @@ import (
 	"matching-engine-lab/go/internal/core"
 	"matching-engine-lab/go/internal/enginev1_btree"
 	"matching-engine-lab/go/internal/enginev2_treemap"
-	"matching-engine-lab/go/internal/enginev3_pool"
 )
 
 func main() {
-	engineFlag := flag.String("engine", "v1", "Engine: v1, v2, or v3")
+	engineFlag := flag.String("engine", "v1", "Engine: v1 or v2")
 	latencyFlag := flag.Bool("latency", false, "Report per-command latency percentiles (p50, p99, p999)")
 	flag.Parse()
 
@@ -25,10 +24,8 @@ func main() {
 		eng = enginev1_btree.New()
 	case "v2":
 		eng = enginev2_treemap.New()
-	case "v3":
-		eng = enginev3_pool.New()
 	default:
-		fmt.Fprintf(os.Stderr, "Unknown engine: %s. Use v1, v2, or v3.\n", *engineFlag)
+		fmt.Fprintf(os.Stderr, "Unknown engine: %s. Use v1 or v2.\n", *engineFlag)
 		os.Exit(1)
 	}
 

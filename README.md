@@ -18,8 +18,8 @@ A research lab project to compare multiple matching engine implementations in Ru
 - `spec/` — JSON schemas and NDJSON format
 - `datasets/` — Sample and generated test data
 - `tools/` — Generator, verifier, benchmark scripts
-- `rust/` — Rust implementations (BTreeMap, SkipList, Arena)
-- `go/` — Go implementations (BTree, TreeMap, Pool)
+- `rust/` — Rust implementations (v1 BTreeMap, v2 TreeMap/RB)
+- `go/` — Go implementations (v1 BTree, v2 TreeMap/RB)
 
 ## Quick Start
 

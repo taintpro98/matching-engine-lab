@@ -22,8 +22,8 @@
 ## Load Test
 
 ```bash
-./tools/bench/load_test.sh                    # 10K, 100K, 1M × v1,v2,v3
-./tools/bench/load_test.sh "100000" "v1 v2"   # 100K × v1,v2 only
+./tools/bench/load_test.sh                    # 10K, 100K, 1M × v1,v2
+./tools/bench/load_test.sh "100000" "v1 v2"   # 100K × v1,v2
 ```
 
 Uses `hyperfine` if installed (`brew install hyperfine`) for mean/stddev; otherwise runs 5 iterations manually.

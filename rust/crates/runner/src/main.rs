@@ -5,8 +5,7 @@ use std::time::Instant;
 
 use engine_core::{parse_command, serialize_event, Engine};
 use engine_v1_btreemap::EngineV1;
-use engine_v2_skiplist::EngineV2;
-use engine_v3_arena::EngineV3;
+use engine_v2_treemap::EngineV2;
 
 fn percentile(sorted: &[u64], p: f64) -> u64 {
     if sorted.is_empty() {
@@ -28,9 +27,8 @@ fn main() {
     let mut engine: Box<dyn Engine> = match engine_name {
         "v1" => Box::new(EngineV1::default()),
         "v2" => Box::new(EngineV2::default()),
-        "v3" => Box::new(EngineV3::default()),
         _ => {
-            eprintln!("Unknown engine: {}. Use v1, v2, or v3.", engine_name);
+            eprintln!("Unknown engine: {}. Use v1 or v2.", engine_name);
             std::process::exit(1);
         }
     };
