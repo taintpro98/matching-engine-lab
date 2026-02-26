@@ -39,4 +39,20 @@ cargo run -p runner -- --engine v1 < input.ndjson > output.ndjson
 
 # Go runner
 go run ./cmd/runner --engine v1 < input.ndjson > output.ndjson
+
+# With latency percentiles (p50, p99, p999)
+cargo run -p runner -- --engine v1 --latency < input.ndjson > output.ndjson
+go run ./cmd/runner --engine v1 --latency < input.ndjson > output.ndjson
+```
+
+## Load Test
+
+```bash
+# Full load test (10K, 100K, 1M commands across all engines)
+./tools/bench/load_test.sh
+
+# Custom: 50K commands, engines v1 and v2
+./tools/bench/load_test.sh "50000" "v1 v2"
+
+# Install hyperfine for better stats: brew install hyperfine
 ```

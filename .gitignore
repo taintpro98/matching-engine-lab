@@ -1,7 +1,8 @@
 # Rust
-/target/
+target/
 **/*.rs.bk
 Cargo.lock
+.rustc_info.json
 
 # Go
 *.exe
@@ -39,3 +40,6 @@ Thumbs.db
 outputs/rust/*.ndjson
 outputs/go/*.ndjson
 datasets/generated/*.ndjson
+datasets/generated/*.json
+*.prof
+*.profraw
